@@ -1,4 +1,4 @@
-# expertSystem
+# ExpertSystem
 
 Projet realisé en 2019 dans le cadre de l'ecole 42. Le but est de creer un programme capable de lire un fichier contenance des relations logiques, et de tirer des conclusion sur la valeur de certains elements contenue dans ces relations.
 
