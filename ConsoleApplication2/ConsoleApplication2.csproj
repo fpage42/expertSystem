@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4413B2F-D7A2-4070-BD92-F798B73791B0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication2</RootNamespace>
+    <AssemblyName>ConsoleApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="core\Contexte.cs" />
+    <Compile Include="core\Core.cs" />
+    <Compile Include="core\ErrorP.cs" />
+    <Compile Include="core\exceptions\UndefinedValueException.cs" />
+    <Compile Include="core\ProgramObject.cs" />
+    <Compile Include="core\ProgramObjectType.cs" />
+    <Compile Include="core\Relation\ERelation.cs" />
+    <Compile Include="core\Relation\LeftAnd.cs" />
+    <Compile Include="core\Relation\LeftInvert.cs" />
+    <Compile Include="core\Relation\LeftOr.cs" />
+    <Compile Include="core\Relation\LeftRelation.cs" />
+    <Compile Include="core\Relation\LeftXor.cs" />
+    <Compile Include="core\Relation\RightAnd.cs" />
+    <Compile Include="core\Relation\RightInvert.cs" />
+    <Compile Include="core\Relation\RightNormal.cs" />
+    <Compile Include="core\Relation\RightOr.cs" />
+    <Compile Include="core\Relation\RightRelation.cs" />
+    <Compile Include="core\Relation\RightXor.cs" />
+    <Compile Include="core\Result.cs" />
+    <Compile Include="core\Symbole.cs" />
+    <Compile Include="Error\Error.cs" />
+    <Compile Include="Error\ErrorType.cs" />
+    <Compile Include="ExpertSystem.cs" />
+    <Compile Include="Lexer\Lexer.cs" />
+    <Compile Include="Lexer\Token.cs" />
+    <Compile Include="Lexer\TokenType.cs" />
+    <Compile Include="Lexer\UnexpectedCharacterException.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\ParserUtils.cs" />
+    <Compile Include="Parser\UnexpectedTokenException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reader\Reader.cs" />
+    <Compile Include="test\evaluationTest\ANDConditionAndConclusions.cs" />
+    <Compile Include="test\leftAndTest\simpleInvertTestAnd.cs" />
+    <Compile Include="test\leftAndTest\simpleResultInvertTestAnd.cs" />
+    <Compile Include="test\leftAndTest\simpleTestAnd.cs" />
+    <Compile Include="test\leftAndTest\threeSymboleTestAnd.cs" />
+    <Compile Include="test\leftAndTest\twoExpressionTestAnd.cs" />
+    <Compile Include="test\leftAndTest\twoExpressionTestAnd2.cs" />
+    <Compile Include="test\leftAndTest\undefinedSimpleTestAnd.cs" />
+    <Compile Include="test\leftInvertTestInvertResult.cs" />
+    <Compile Include="test\leftNormalTest.cs" />
+    <Compile Include="test\leftOrTest\simpleInvertTestOr.cs" />
+    <Compile Include="test\leftOrTest\simpleTestOr.cs" />
+    <Compile Include="test\leftOrTest\simpleTestOrInvertResult.cs" />
+    <Compile Include="test\leftXorTest\SimpleXorTest.cs" />
+    <Compile Include="test\notDefinedSymboleTest.cs" />
+    <Compile Include="test\rightAndTest\simpleTestAnd.cs" />
+    <Compile Include="test\rightXorTest\simpleRightXorTest.cs" />
+    <Compile Include="test\secondLevelTest\LeftAndRightAndTest.cs" />
+    <Compile Include="test\secondLevelTest\LeftOrRightOrTest.cs" />
+    <Compile Include="test\secondLevelTest\OrAndTwoSymboleTest.cs" />
+    <Compile Include="test\simpleTestInfinityLoop.cs" />
+    <Compile Include="test\Test.cs" />
+    <Compile Include="test\testInfinityLoopThreeSymbole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\testParser" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
